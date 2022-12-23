@@ -1,0 +1,9 @@
+# build target dir
+/bin/
+/build/
+
+# generic temp files
+*.a
+*.d
+*.o
+lv2_ttl_generator
