@@ -6,7 +6,6 @@
  */
 
 #include "DistrhoUI.hpp"
-#include "ResizeHandle.hpp"
 
 START_NAMESPACE_DISTRHO
 
@@ -15,7 +14,6 @@ START_NAMESPACE_DISTRHO
 class ImGuiPluginUI : public UI
 {
     float fGain = 0.0f;
-    ResizeHandle fResizeHandle;
 
     // ----------------------------------------------------------------------------------------------------------------
 
@@ -25,14 +23,8 @@ public:
       The UI should be initialized to a default state that matches the plugin side.
     */
     ImGuiPluginUI()
-        : UI(DISTRHO_UI_DEFAULT_WIDTH, DISTRHO_UI_DEFAULT_HEIGHT),
-          fResizeHandle(this)
+        : UI(DISTRHO_UI_DEFAULT_WIDTH, DISTRHO_UI_DEFAULT_HEIGHT)
     {
-        setGeometryConstraints(DISTRHO_UI_DEFAULT_WIDTH, DISTRHO_UI_DEFAULT_HEIGHT, true);
-
-        // hide handle if UI is resizable
-//         if (isResizable())
-//             fResizeHandle.hide();
     }
 
 protected:
