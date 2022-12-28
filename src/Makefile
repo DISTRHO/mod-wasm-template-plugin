@@ -10,8 +10,7 @@
 NAME = mod-wasm-example
 
 # require for modgui builds
-PLUGIN_CLASS = distrho_examples_ImGuiSimpleGain
-PLUGIN_URI = urn:distrho:examples:imguisimplegain
+MODGUI_CLASS_NAME = distrho_examples_ImGuiSimpleGain
 
 # --------------------------------------------------------------
 # Files to build
