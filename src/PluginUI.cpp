@@ -25,6 +25,7 @@ public:
     ImGuiPluginUI()
         : UI(DISTRHO_UI_DEFAULT_WIDTH, DISTRHO_UI_DEFAULT_HEIGHT)
     {
+        setFontSize(20);
     }
 
 protected:
@@ -57,7 +58,7 @@ protected:
         if (ImGui::Begin("Simple gain", nullptr, ImGuiWindowFlags_NoResize))
         {
             static char aboutText[256] = "This is a demo plugin made with ImGui.\n";
-            ImGui::InputTextMultiline("About", aboutText, sizeof(aboutText));
+            ImGui::InputTextMultiline("About", aboutText, sizeof(aboutText), ImVec2(390, getHeight()*2/3));
 
             if (ImGui::SliderFloat("Gain (dB)", &fGain, -90.0f, 30.0f))
             {
